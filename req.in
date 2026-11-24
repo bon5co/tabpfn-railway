@@ -1,0 +1,8 @@
+# tabpfn is pinned to the newest upstream release (PriorLabs/TabPFN v10.2.0, 2026-11-17). Its default weights are
+# NOT used: app.py loads only the TabPFN-2 checkpoints baked into /models (the only ones licensed for commercial use).
+tabpfn==10.2.0
+# CPU-only torch wheel (resolved from the PyTorch CPU index at compile time, about 200 MB instead of 2+ GB with CUDA).
+torch
+fastapi
+uvicorn
+huggingface_hub

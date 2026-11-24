@@ -1,0 +1,17 @@
+tabpfn-railway - a Railway deployment of TabPFN v2 behind one authenticated HTTP API.
+
+Built with PriorLabs-TabPFN.
+
+- Wrapper code (app.py, entrypoint.sh, fetch_weights.py, Dockerfile): Apache License 2.0, see LICENSE.
+- The `tabpfn` Python package (PriorLabs/TabPFN, v10.2.0): Apache License 2.0. Text in /licenses/tabpfn-package-LICENSE.
+- Model weights Prior-Labs/TabPFN-v2-clf and Prior-Labs/TabPFN-v2-reg (the TabPFN-2 checkpoints), same Prior Labs
+  License 1.1. Text in /licenses/PriorLabs-TabPFN-v2-LICENSE. Section 10: whoever makes this service available must
+  provide a copy of that licence with it and prominently display "Built with PriorLabs-TabPFN" on each related
+  website, user interface, blogpost, about page or product documentation. Every API response carries the header
+  `X-Built-With: PriorLabs-TabPFN`.
+- Later TabPFN weights (2.5, 2.6, 3, 3.5) are non-commercial and gated; they are not in this image and the service
+  never loads them.
+- torch (BSD-3-Clause), NumPy (BSD-3-Clause), scikit-learn (BSD-3-Clause), FastAPI (MIT), uvicorn (BSD-3-Clause) and
+  the other Python dependencies pinned in requirements.txt, each under its own licence.
+
+Predictions come from a statistical model and can be wrong. Do not use them alone for decisions that affect people.
